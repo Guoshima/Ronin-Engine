@@ -41,7 +41,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="..\..\Engine\Core;..\..\Engine\DX11Renderer;..\..\Libraries\EASTL\include"
+				AdditionalIncludeDirectories="..\..\RoninEngine\Core;..\..\RoninEngine\DX11Renderer;..\..\Libraries\EASTL\include"
 				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
