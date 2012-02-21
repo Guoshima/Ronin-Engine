@@ -169,7 +169,7 @@ bool CDX11EffectManager::LoadEffectFile(
 	ID3DBlob* pkErrors = NULL;
 
 	CFileSystem* pFileSystem = CCoreEngine::Get()->GetFileSystem();
-	CFile* pFile = pFileSystem->OpenFile(sFileName, CFile::OM_Read);
+	CFile* pFile = pFileSystem->OpenFile(sFileName, CFile::eOpenMode_Read);
 	if (pFile == 0)
 		return false;
 

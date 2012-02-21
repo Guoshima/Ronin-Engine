@@ -6,7 +6,7 @@
 
 #include "MaterialManager.h"
 #include "FileSystem.h"
-#include "StreamingEngine.h"
+#include "StreamEngine.h"
 
 //////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////
@@ -50,7 +50,7 @@ void CCoreEngine::Shutdown()
 //////////////////////////////////////////////////////////////////////////
 
 CCoreEngine::CCoreEngine() : m_pFileSystem(0), m_pMaterialManager(0),
-	m_bHasFocus(false)
+	m_pStreamEngine(0), m_bHasFocus(false)
 {
 }
 
@@ -65,8 +65,8 @@ bool CCoreEngine::Initialize()
 {
 	m_pFileSystem = IntNew CFileSystem;
 	
-	m_pStreamingEngine = IntNew CStreamingEngine;
-	if (!m_pStreamingEngine->Initialize())
+	m_pStreamEngine = IntNew CStreamEngine;
+	if (!m_pStreamEngine->Initialize())
 		return false;
 
 	m_pMaterialManager = IntNew CMaterialManager;
@@ -77,7 +77,7 @@ bool CCoreEngine::Initialize()
 void CCoreEngine::Cleanup()
 {
 	IntSafeDelete(m_pMaterialManager);
-	IntSafeDelete(m_pStreamingEngine);
+	IntSafeDelete(m_pStreamEngine);
 	IntSafeDelete(m_pFileSystem);
 
 	// all system event listeners should be unregistered by now

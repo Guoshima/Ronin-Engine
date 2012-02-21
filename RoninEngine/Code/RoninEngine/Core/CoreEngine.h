@@ -4,7 +4,7 @@
 
 class CFileSystem;
 class CMaterialManager;
-class CStreamingEngine;
+class CStreamEngine;
 
 class ISystemEventListener
 {
@@ -37,7 +37,7 @@ public:
 
 	CFileSystem* GetFileSystem() { return m_pFileSystem; }
 	CMaterialManager* GetMaterialManager() { return m_pMaterialManager; }
-	CStreamingEngine* GetStreamingEngine() { return m_pStreamingEngine; }
+	CStreamEngine* GetStreamEngine() { return m_pStreamEngine; }
 
 	//////////////////////////////////////////////////////////////////////////
 
@@ -69,7 +69,7 @@ private:
 	// core member engine member which can be retrieved through the engine singleton
 	CFileSystem* m_pFileSystem;
 	CMaterialManager* m_pMaterialManager;
-	CStreamingEngine* m_pStreamingEngine;
+	CStreamEngine* m_pStreamEngine;
 
 	// listerens of general system events
 	typedef stl_vector<ISystemEventListener*> TSystemEventListenerList;
@@ -78,5 +78,5 @@ private:
 
 // easy macro's to retrieve the core member
 #define FILE_SYSTEM CCoreEngine::Get()->GetFileSystem()
-#define STREAMING_ENGINE CCoreEngine::Get()->GetStreamingEngine()
+#define STREAM_ENGINE CCoreEngine::Get()->GetStreamEngine()
 #define MATERIAL_MANAGER CCoreEngine::Get()->GetMaterialManager()

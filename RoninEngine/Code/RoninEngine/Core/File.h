@@ -12,10 +12,10 @@ public:
 
 	enum EOpenMode
 	{
-		OM_Invalid,
-		OM_Read,
-		OM_Write,
-		OM_Append,
+		eOpenMode_Invalid,
+		eOpenMode_Read,
+		eOpenMode_Write,
+		eOpenMode_Append,
 	};
 		
 	EOpenMode GetOpenMode() const { return m_eOpenMode; }

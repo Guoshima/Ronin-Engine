@@ -8,11 +8,11 @@ const char* CFile::GetOpenMode(EOpenMode eOpenMode)
 {
 	switch (eOpenMode)
 	{
-	case OM_Read:
+	case eOpenMode_Read:
 		return "rb";
-	case OM_Write:
+	case eOpenMode_Write:
 		return "wb";
-	case OM_Append:
+	case eOpenMode_Append:
 		return "ab";
 	}
 
@@ -23,7 +23,7 @@ const char* CFile::GetOpenMode(EOpenMode eOpenMode)
 
 //////////////////////////////////////////////////////////////////////////
 
-CFile::CFile() : m_eOpenMode(OM_Invalid), m_pFile(0), m_nSize(INVALID_SIZE)
+CFile::CFile() : m_eOpenMode(eOpenMode_Invalid), m_pFile(0), m_nSize(INVALID_SIZE)
 {
 
 }

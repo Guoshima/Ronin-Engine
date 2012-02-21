@@ -21,6 +21,8 @@
 
 #define USE_EASTL
 
+typedef long long uint64;
+
 #include "STL.h"
 #include "CoreMemObject.h"
 #include "CoreEngine.h"

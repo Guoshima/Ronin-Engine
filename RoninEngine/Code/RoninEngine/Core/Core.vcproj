@@ -528,11 +528,39 @@
 			Name="Streaming"
 			>
 			<File
-				RelativePath=".\StreamingEngine.cpp"
+				RelativePath=".\StreamDefines.h"
 				>
 			</File>
 			<File
-				RelativePath=".\StreamingEngine.h"
+				RelativePath=".\StreamEngine.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\StreamEngine.h"
+				>
+			</File>
+			<File
+				RelativePath=".\StreamProcessor.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\StreamProcessor.h"
+				>
+			</File>
+			<File
+				RelativePath=".\StreamReadRequest.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\StreamReadRequest.h"
+				>
+			</File>
+			<File
+				RelativePath=".\StreamWorkerThreads.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\StreamWorkerThreads.h"
 				>
 			</File>
 		</Filter>

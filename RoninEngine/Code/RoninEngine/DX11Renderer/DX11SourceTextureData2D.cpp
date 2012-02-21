@@ -25,7 +25,7 @@ bool CDX11SourceTextureData2D::CreateD3DData(ID3D11Device* pkDevice)
 	D3D11_TEXTURE2D_DESC desc;
 
 	CFileSystem* pFileSystem = CCoreEngine::Get()->GetFileSystem();
-	CFile* pFile = pFileSystem->OpenFile(m_kCreateParams.m_sFileName, CFile::OM_Read);
+	CFile* pFile = pFileSystem->OpenFile(m_kCreateParams.m_sFileName, CFile::eOpenMode_Read);
 	if (pFile == 0)
 		return false;
 
